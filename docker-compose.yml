@@ -5,13 +5,19 @@ services:
     ports:
       - "8000:8000"
     volumes:
+      - ./backend:/app             # Permet le hot-reload backend
       - ./data:/app/data
     environment:
-      - GROQ_API_KEY=VOTRE_CLE_ICI
+      - GROQ_API_KEY=${GROQ_API_KEY}
 
   frontend:
     build: ./frontend
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontend:/app            # Lie votre code local au container
+      - /app/node_modules          # Empêche Docker d'écraser les bibliothèques
+    environment:
+      - WATCHPACK_POLLING=true     # Indispensable pour Windows/WSL2
     depends_on:
       - backend
