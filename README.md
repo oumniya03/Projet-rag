@@ -17,40 +17,32 @@ A full-stack Retrieval-Augmented Generation (RAG) application capable of answeri
 ## 🛠️ Architecture
 
 
-### System Architecture
-
 ```mermaid
-graph TB
-    subgraph "🎨 Frontend Layer"
-        UI[Next.js ApplicationReact + TypeScript]
+graph TD
+    subgraph Frontend [Frontend Container]
+        UI[Next.js Interface]
     end
-    
-    subgraph "⚙️ Backend Layer"
-        API[FastAPI ServerPython]
-        Splitter[Text SplitterDocument Processing]
-        Prompt[Prompt BuilderContext Assembly]
+
+    subgraph Backend [Backend Container]
+        API[FastAPI Server]
+        Chain[LangChain Pipeline]
     end
-    
-    subgraph "💾 Storage Layer"
-        FAISS[(FAISS Vector DBEmbeddings)]
-        META[JSON MetadataDocument Info]
+
+    subgraph Data [Persistence]
+        PDFs[Uploaded Files]
+        FAISS[(Vector Index)]
     end
-    
-    subgraph "🤖 AI Services"
-        EMB[HuggingFace Embeddingsall-MiniLM-L6-v2Local]
-        LLM[Groq APILlama-3-70bRemote]
-    end
-    
-    UI -->|Upload PDF| API
-    API -->|Process| Splitter
-    Splitter -->|Generate| EMB
-    EMB -->|Store Vectors| FAISS
-    API -->|Save Info| META
-    
-    style UI fill:#61dafb,stroke:#333,stroke-width:2px
-    style API fill:#009688,stroke:#333,stroke-width:2px
-    style FAISS fill:#ff9800,stroke:#333,stroke-width:2px
-    style LLM fill:#9c27b0,stroke:#333,stroke-width:2px
+
+    User((User)) -->|Uploads PDF| UI
+    UI -->|POST /upload| API
+    API -->|Process & Embed| FAISS
+
+    User -->|Asks Question| UI
+    UI -->|POST /chat| API
+    API -->|Retrieves Context| FAISS
+    FAISS -->|Context| Chain
+    Chain -->|Context + Query| Groq[Groq API]
+    Groq -->|Response| UI
 ```
 
 
