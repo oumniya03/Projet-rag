@@ -255,9 +255,6 @@ GROQ_API_KEY=your_actual_key_here
 
 This is a challenge submission project. For questions or feedback, please contact the author.
 
-## 📄 License
-
-This project is submitted as part of the Quorium Coding Challenge.
 
 ## 👤 Author
 
@@ -277,6 +274,6 @@ This project is submitted as part of the Quorium Coding Challenge.
 
 ---
 
-**Submission for:** Quorium Coding Challenge
+
 
 *Built with ❤️ using FastAPI, Next.js, and Docker*
