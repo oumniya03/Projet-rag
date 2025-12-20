@@ -21,34 +21,8 @@ A full-stack Retrieval-Augmented Generation (RAG) application capable of answeri
 
 ## 🛠️ Architecture
 
+<img width="1096" height="684" alt="diagram-export-20-12-2025-18_22_19" src="https://github.com/user-attachments/assets/8b180a65-355d-495b-a80f-76fe597c0a79" />
 
-```mermaid
-graph TD
-    subgraph Frontend [Frontend Container]
-        UI[Next.js Interface]
-    end
-
-    subgraph Backend [Backend Container]
-        API[FastAPI Server]
-        Chain[LangChain Pipeline]
-    end
-
-    subgraph Data [Persistence]
-        PDFs[Uploaded Files]
-        FAISS[(Vector Index)]
-    end
-
-    User((User)) -->|Uploads PDF| UI
-    UI -->|POST /upload| API
-    API -->|Process & Embed| FAISS
-
-    User -->|Asks Question| UI
-    UI -->|POST /chat| API
-    API -->|Retrieves Context| FAISS
-    FAISS -->|Context| Chain
-    Chain -->|Context + Query| Groq[Groq API]
-    Groq -->|Response| UI
-```
 
 
 
