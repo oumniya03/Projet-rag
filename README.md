@@ -13,6 +13,11 @@ A full-stack Retrieval-Augmented Generation (RAG) application capable of answeri
 - **💬 Modern UI**: Chat interface with markdown support, history management, and **citation sources**.
 - **🔒 Secure**: API keys managed via environment variables (not exposed in code).
 - **🐳 Dockerized**: Fully containerized environment managed by a custom `docker.sh` script.
+## 🤖 Interface
+<img width="914" height="416" alt="image" src="https://github.com/user-attachments/assets/e69331f2-a84f-4e08-85e7-884a6d8d87bf" />
+
+## 🐳Docker Image
+<img width="953" height="479" alt="image" src="https://github.com/user-attachments/assets/86536f1d-576c-4f7d-a495-daa74bc60c3b" />
 
 ## 🛠️ Architecture
 
