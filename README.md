@@ -42,6 +42,9 @@ graph TD
     FAISS -->|Context| Chain
     Chain -->|Context + Query| Groq[Groq API]
     Groq -->|Response| UI
+```
+
+
 
 ## 📦 Prerequisites
 
