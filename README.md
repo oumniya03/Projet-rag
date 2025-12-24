@@ -1,4 +1,5 @@
 # 📚 RAG Q&A Chatbot 
+**Candidate : Oumniya Moutaouakil**
 
 A full-stack Retrieval-Augmented Generation (RAG) application capable of answering questions based on uploaded PDF documents. Built with **Next.js**, **FastAPI**, **LangChain**, and **Docker**.
 
@@ -85,43 +86,6 @@ Once the containers are running, you can access:
 | `./docker.sh build` | Rebuilds the images (useful after code changes) |
 | `./docker.sh logs` | Displays real-time logs from backend and frontend |
 
-## 🧪 Evaluation & Testing
-
-### API Endpoint (`/ask`)
-
-Per the challenge requirements, a compliant endpoint is available:
-
-```bash
-curl -X POST "http://localhost:8000/ask" \
-     -H "Content-Type: application/json" \
-     -d '{"question": "What is Cloud Computing?"}'
-```
-
-**Expected Response Format:**
-
-```json
-{
-  "answer": "Cloud Computing is...",
-  "sources": ["document1.pdf", "document2.pdf"]
-}
-```
-
-### Self-Evaluation Script (LLM-as-a-Judge)
-
-An automated evaluation script is included to test **Faithfulness** and **Answer Relevance** using Llama-3 as a judge.
-
-**Run the evaluation:**
-
-```bash
-# Requires local python environment
-pip install python-dotenv langchain-groq langchain
-python evaluate.py
-```
-
-The script will:
-- Test multiple sample questions
-- Evaluate answer quality using LLM-based metrics
-- Generate a report with scores for faithfulness and relevance
 
 ## 📂 Project Structure
 
@@ -139,39 +103,11 @@ Projet-rag/
 ├── data/                    # Persisted Data (Indices & Uploads)
 ├── docker-compose.yml       # Docker Orchestration
 ├── docker.sh                # Management Script
-├── evaluate.py              # Quality Assessment Script
 ├── .env                     # Environment Variables (create this)
 └── README.md                # This file
 ```
 
-## 🛠️ Technology Stack
 
-### Backend
-- **FastAPI** - Modern, fast web framework for building APIs
-- **LangChain** - Framework for developing LLM applications
-- **Groq** - Ultra-fast LLM inference
-- **Sentence Transformers** - State-of-the-art text embeddings
-- **FAISS** - Efficient similarity search and clustering
-
-### Frontend
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **React Hooks** - Modern state management
-
-### Infrastructure
-- **Docker** - Containerization
-- **Docker Compose** - Multi-container orchestration
-
-## 🚀 Features
-
-- ✅ **Document Upload & Processing** - Support for PDF, TXT, and other text formats
-- ✅ **Intelligent Retrieval** - Semantic search using embeddings
-- ✅ **Contextual Answers** - RAG-powered responses with source attribution
-- ✅ **Real-time Chat Interface** - Modern, responsive UI
-- ✅ **API Documentation** - Auto-generated with FastAPI/Swagger
-- ✅ **Automated Evaluation** - LLM-as-a-Judge quality metrics
-- ✅ **Docker Deployment** - One-command setup and teardown
 
 ## 📝 Usage Guide
 
@@ -256,4 +192,5 @@ This is a challenge submission project. For questions or feedback, please contac
 
 
 
-*Built with ❤️ using FastAPI, Next.js, and Docker*
+*Built  using FastAPI, Next.js, and Docker*
+
