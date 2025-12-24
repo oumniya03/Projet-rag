@@ -1,4 +1,4 @@
-# 📚 RAG Q&A Chatbot 
+#  RAG Q&A Chatbot 
 **Candidate : Oumniya Moutaouakil**
 
 A full-stack Retrieval-Augmented Generation (RAG) application capable of answering questions based on uploaded PDF documents. Built with **Next.js**, **FastAPI**, **LangChain**, and **Docker**.
