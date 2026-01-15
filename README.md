@@ -22,8 +22,7 @@ A full-stack Retrieval-Augmented Generation (RAG) application capable of answeri
 
 ## 🛠️ Architecture
 
-<img width="1096" height="684" alt="diagram-export-20-12-2025-18_22_19" src="https://github.com/user-attachments/assets/8b180a65-355d-495b-a80f-76fe597c0a79" />
-
+<img width="1288" height="755" alt="architecture rag" src="https://github.com/user-attachments/assets/75588bb9-5b72-4ac2-a5ba-2f92c7bcbf46" />
 
 
 
