@@ -174,8 +174,9 @@ This is a challenge submission project. For questions or feedback, please contac
 
 ## 👤 Author
 
-**Oumniya**
+**Oumniya Moutaouakil**
 
+- Master's Student in Advanced Machine Learning & Multimedia Intelligence.
 - GitHub: [@oumniya03](https://github.com/oumniya03)
 - Project: [Projet-rag](https://github.com/oumniya03/Projet-rag)
 
